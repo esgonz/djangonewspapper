@@ -62,3 +62,9 @@ class NewsTags(models.Model):
 class Gallery(models.Model):
 	media = models.ForeignKey(Media, on_delete=models.DO_NOTHING)
 	news = models.ForeignKey(News, on_delete=models.DO_NOTHING)
+
+
+class Cover(models.Model):
+	date = models.DateTimeField()
+
+

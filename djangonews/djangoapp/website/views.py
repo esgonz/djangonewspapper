@@ -7,7 +7,7 @@ from .models import News
 # 
 def index(request):
     latest_question_list = News.objects.order_by('date')[:5]
-    template = loader.get_template('news/cover.html')
+    template = loader.get_template('news/single.html')
     context = {
         'latest_question_list': latest_question_list,
     }

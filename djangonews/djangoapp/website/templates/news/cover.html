@@ -1,0 +1,276 @@
+{# Load the tag library #}
+{% load bootstrap4 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+{# Load static files #}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>News Today</title>
+	<link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+</head>
+<body>
+	<div class="container">
+		<!--cover section-->
+		<div class="row">
+	        <div class="col-sm-12" class="cover_block">
+	        	<h2>Portada</h2>
+
+				<!-- main news -->
+				<div class="row">
+			        <div class="col-sm-12 cover_news">
+			            <div class="row">
+			            	<div class="col-sm-12 cover_news_image">
+			            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
+								<div class="cover_news_head_box">
+									<a href="#" class="category">
+										Category
+									</a>
+									<h4 class="title">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
+									</h4>
+								</div>
+			            	</div>
+			            </div>
+
+			            <div class="row">
+			            	<div class="col-sm-12 cover_news_data">
+			            		<p class="subhead">
+			            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi deleniti saepe tempore! Aliquam repudiandae distinctio tempora nesciunt maiores tempore, dicta minus, ad soluta molestias neque rem deserunt asperiores aut. Nostrum. 
+			            			<a href="#" class="">
+			            				Continuar Leyendo &rsaquo;
+			            			</a>
+								</p>
+
+			            </div>
+			            </div>
+			        </div>
+			        
+			    </div>
+		
+				<!--3 secundary news -->
+			    <div class="row">
+			    	
+			    	<!-- col1 -->
+			        <div class="col-sm-4 cover_news_b">
+			            <div class="row">
+			            	<div class="col-sm-12 cover_news_image">
+			            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
+							
+			            	</div>
+			            </div>
+
+			            <div class="row">
+			            	<div class="col-sm-12 cover_news_data">
+			            		<a href="#" class="category">Category</a>
+			            		<h4 class="title">
+			            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
+			            		</h4>
+			            		<p class="subhead">
+			            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi deleniti saepe tempore! Aliquam repudiandae distinctio tempora nesciunt maiores tempore, dicta minus, ad soluta molestias neque rem deserunt asperiores aut. Nostrum.
+									<br>
+			            			<a href="#" class="">
+			            				Continuar Leyendo &rsaquo;
+			            			</a>
+			            		</p>
+			            	</div>
+			            </div>
+			        </div>
+			        <!--/col1-->
+			        
+			        <!-- col1 -->
+			        <div class="col-sm-4 cover_news_b">
+			            <div class="row">
+			            	<div class="col-sm-12 cover_news_image">
+			            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
+							
+			            	</div>
+			            </div>
+
+			            <div class="row">
+			            	<div class="col-sm-12 cover_news_data">
+			            		<a href="#" class="category">Category</a>
+			            		<h4 class="title">
+			            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
+			            		</h4>
+			            		<p class="subhead">
+			            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi deleniti saepe tempore! Aliquam repudiandae distinctio tempora nesciunt maiores tempore, dicta minus, ad soluta molestias neque rem deserunt asperiores aut. Nostrum.
+									<br>
+			            			<a href="#" class="">
+			            				Continuar Leyendo &rsaquo;
+			            			</a>
+			            		</p>
+			            	</div>
+			            </div>
+			        </div>
+			        <!--/col1-->
+
+			        <!-- col1 -->
+			        <div class="col-sm-4 cover_news_b">
+			            <div class="row">
+			            	<div class="col-sm-12 cover_news_image">
+			            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
+							
+			            	</div>
+			            </div>
+
+			            <div class="row">
+			            	<div class="col-sm-12 cover_news_data">
+			            		<a href="#" class="category">Category</a>
+			            		<h4 class="title">
+			            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
+			            		</h4>
+			            		<p class="subhead">
+			            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi deleniti saepe tempore! Aliquam repudiandae distinctio tempora nesciunt maiores tempore, dicta minus, ad soluta molestias neque rem deserunt asperiores aut. Nostrum.
+									<br>
+			            			<a href="#" class="">
+			            				Continuar Leyendo &rsaquo;
+			            			</a>
+			            		</p>
+			            	</div>
+			            </div>
+			        </div>
+			        <!--/col1-->
+			    </div>
+			</div>
+		</div> <!-- /cover section-->
+		
+
+		<!--cover section-->
+		<div class="row cover_color_2">
+	        <div class="col-sm-12" class="cover_block ">
+	        	<h2>Portada</h2>
+
+				<!-- main news -->
+				<div class="row ">
+			        <div class="col-sm-12 cover_news">
+			            <div class="row">
+			            	<div class="col-sm-12 cover_news_image">
+			            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
+								<div class="cover_news_head_box">
+									<a href="#" class="category">
+										Category
+									</a>
+									<h4 class="title">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
+									</h4>
+								</div>
+			            	</div>
+			            </div>
+
+			            <div class="row">
+			            	<div class="col-sm-12 cover_news_data">
+			            		<p class="subhead">
+			            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi deleniti saepe tempore! Aliquam repudiandae distinctio tempora nesciunt maiores tempore, dicta minus, ad soluta molestias neque rem deserunt asperiores aut. Nostrum. 
+			            			<a href="#" class="">
+			            				Continuar Leyendo &rsaquo;
+			            			</a>
+								</p>
+
+			            </div>
+			            </div>
+			        </div>
+			        
+			    </div>
+		
+				<!--3 secundary news -->
+			    <div class="row">
+			    	
+			    	<!-- col1 -->
+			        <div class="col-sm-4 cover_news_b">
+			            <div class="row">
+			            	<div class="col-sm-12 cover_news_image">
+			            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
+							
+			            	</div>
+			            </div>
+
+			            <div class="row">
+			            	<div class="col-sm-12 cover_news_data">
+			            		<a href="#" class="category">Category</a>
+			            		<h4 class="title">
+			            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
+			            		</h4>
+			            		<p class="subhead">
+			            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi deleniti saepe tempore! Aliquam repudiandae distinctio tempora nesciunt maiores tempore, dicta minus, ad soluta molestias neque rem deserunt asperiores aut. Nostrum.
+									<br>
+			            			<a href="#" class="">
+			            				Continuar Leyendo &rsaquo;
+			            			</a>
+			            		</p>
+			            	</div>
+			            </div>
+			        </div>
+			        <!--/col1-->
+			        
+			        <!-- col1 -->
+			        <div class="col-sm-4 cover_news_b">
+			            <div class="row">
+			            	<div class="col-sm-12 cover_news_image">
+			            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
+							
+			            	</div>
+			            </div>
+
+			            <div class="row">
+			            	<div class="col-sm-12 cover_news_data">
+			            		<a href="#" class="category">Category</a>
+			            		<h4 class="title">
+			            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
+			            		</h4>
+			            		<p class="subhead">
+			            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi deleniti saepe tempore! Aliquam repudiandae distinctio tempora nesciunt maiores tempore, dicta minus, ad soluta molestias neque rem deserunt asperiores aut. Nostrum.
+									<br>
+			            			<a href="#" class="">
+			            				Continuar Leyendo &rsaquo;
+			            			</a>
+			            		</p>
+			            	</div>
+			            </div>
+			        </div>
+			        <!--/col1-->
+
+			        <!-- col1 -->
+			        <div class="col-sm-4 cover_news_b">
+			            <div class="row">
+			            	<div class="col-sm-12 cover_news_image">
+			            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
+							
+			            	</div>
+			            </div>
+
+			            <div class="row">
+			            	<div class="col-sm-12 cover_news_data">
+			            		<a href="#" class="category">Category</a>
+			            		<h4 class="title">
+			            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
+			            		</h4>
+			            		<p class="subhead">
+			            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi deleniti saepe tempore! Aliquam repudiandae distinctio tempora nesciunt maiores tempore, dicta minus, ad soluta molestias neque rem deserunt asperiores aut. Nostrum.
+									<br>
+			            			<a href="#" class="">
+			            				Continuar Leyendo &rsaquo;
+			            			</a>
+			            		</p>
+			            	</div>
+			            </div>
+			        </div>
+			        <!--/col1-->
+			    </div>
+			</div>
+		</div> <!-- /cover section-->
+
+
+	</div>
+</body>
+</html>

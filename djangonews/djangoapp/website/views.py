@@ -81,13 +81,27 @@ def category(request, category_id):
     last_news = News.objects.all()[:5]
     
 
- 
+
+
+
+
+    dict_icon = {
+        '1' : 'map-marker',
+        '2' : 'globe',
+        '3' : 'baseball-ball',
+        '4' : 'dollar-sign',
+        '5' : 'stopwatch',
+        '6' : 'laptop'
+    }
+
+
     template = loader.get_template('news/cover-category.html')
     context = {
         'main_news_b': main_news[1],
         'main_news_c': [main_news[2], main_news[3]],
         'news_list': list_news,
-        'last_news': last_news
+        'last_news': last_news,
+        'icon': dict_icon.get(str(category_id))
     }
     return HttpResponse(template.render(context, request))
 
@@ -103,13 +117,23 @@ def single(request, news_id):
     last_news = News.objects.all()[:5]
     
 
- 
+    dict_icon = {
+        '1' : 'map-marker',
+        '2' : 'globe',
+        '3' : 'baseball-ball',
+        '4' : 'dollar-sign',
+        '5' : 'stopwatch',
+        '6' : 'laptop'
+    }
+
+
     template = loader.get_template('news/single.html')
     context = {
         'main_news_b': list_news[1],
         'main_news_c': [list_news[2], list_news[3]],
         'news': news,
-        'last_news': last_news
+        'last_news': last_news,
+        'icon': dict_icon.get(str(news.category.id))
     }
     return HttpResponse(template.render(context, request))
 

@@ -67,4 +67,6 @@ class Gallery(models.Model):
 class Cover(models.Model):
 	date = models.DateTimeField()
 
-
+class CoverNews(models.Model):
+	cover = models.ForeignKey(Cover, on_delete=models.DO_NOTHING)
+	news =  models.ForeignKey(News, on_delete=models.DO_NOTHING)

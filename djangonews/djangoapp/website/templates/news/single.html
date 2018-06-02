@@ -1,5 +1,7 @@
 {# Load the tag library #}
 {% load bootstrap4 %}
+{% load fontawesome %}
+
 
 {# Load CSS and JavaScript #}
 {% bootstrap_css %}
@@ -18,10 +20,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>News Today</title>
 	<link rel="stylesheet" href="{% static 'CSS/style.css' %}">
-	<link href="{% static 'libs/open-iconic/font/css/open-iconic-foundation.css' %} " rel="stylesheet">a
+	  {% fontawesome_stylesheet %}
+	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark">
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
 			<a class="navbar-brand" href="#">
 		    	<img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
 		  	</a>
@@ -31,31 +36,34 @@
 			<div class="collapse navbar-collapse" id="navbarNavDropdown">
 				<ul class="navbar-nav">
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Portada <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="#"><i class="fa fa-home"></i> &nbsp; Portada <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Nacional</a>
+						<a class="nav-link" href="#"><i class="fa fa-map-marker"></i>&nbsp; Nacional</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Internacional</a>
+						<a class="nav-link" href="#"><i class="fa fa-globe"></i> &nbsp; Internacional</a>
 					</li>
 
 					<li class="nav-item">
-						<a class="nav-link" href="#">Deporte</a>
+						<a class="nav-link" href="#"><i class="fa fa-baseball-ball"></i> &nbsp; Deporte</a>
 					</li>
 					
 					<li class="nav-item">
-						<a class="nav-link" href="#">Negocios</a>
+						<a class="nav-link" href="#"><i class="fa fa-dollar"></i> &nbsp; Negocios</a>
 					</li>
-
+					
 					<li class="nav-item">
-						<a class="nav-link" href="#">Actualidad</a>
+						<a class="nav-link" href="#"><i class="fa fa-laptop"></i>&nbsp; Tecnologia</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="fa fa-stopwatch"></i>&nbsp; Actualidad</a>
 					</li>
 				</ul>
 			</div>
-		</nav>
+	</nav>
 
-	<div class="container-fluid">
+	<div class="container">
 
 
 
@@ -63,7 +71,7 @@
 
 		<!-- ads --> 
 		<div class="row">
-	        <div class="col-sm-12 cover_block">
+	        <div class="col-sm-12 ">
 	        	<img src="{% static 'img/ads/a8.png' %}" alt="" href="#" class="img-fluid w-100 ads_banner_h">
 	        </div>
 	    </div>
@@ -72,7 +80,8 @@
 		<!--cover section-->
 		<div class="row">
 	        <div class="col-sm-12 cover_block">
-	        	<h2>Portada</h2>
+	        	<h4><i class="fa fa-map-marker"></i>&nbsp;Nacional</h4>
+	        	<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet</h2>
 
 				<!-- main news -->
 				<div class="row">
@@ -81,11 +90,12 @@
 			            	<div class="col-sm-12 cover_news_image">
 			            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
 								<div class="cover_news_head_box">
-									<a href="#" class="category">
-										Category
-									</a>
+		
 									<h4 class="title">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
+										Según el relato del Ministerio Público, los hechos tuvieron lugar en el
+									    bulevar de Avroy del centro de Lieja, en torno a las 10:30 y las 11:30. El
+									    individuo se abalanzó por detrás contra las dos mujeres policía, de 45 y 53
+									    años
 									</h4>
 								</div>
 			            	</div>
@@ -198,7 +208,9 @@
 				<!-- /main news -->
 				<!-- 3 secundary news -->
 			    <div class="row">
-			    	
+			    	<div class="col-sm-12">
+			    		<h3>Otras Noticias Nacionales</h3>
+			   		</div>
 			    	<!-- col1 -->
 			        <div class="col-sm-6 cover_news_b">
 			        	<div class="cover_news_b_inner">
@@ -298,7 +310,7 @@
 
 		<!-- ads --> 
 		<div class="row">
-	        <div class="col-sm-12 cover_block">
+	        <div class="col-sm-12 ">
 	        	<img src="{% static 'img/ads/a1.png' %}" alt="" href="#" class="img-fluid w-100 ads_banner_h">
 	        </div>
 	    </div>
@@ -309,6 +321,33 @@
 		
 		
 
-	</div>
+	</div>	
+
+	<nav class="navbar  navbar-expand-lg navbar-dark navbar-footer">
+			<a class="navbar-brand" href="#">
+		    	<img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+		  	</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="#"><i class="fa fa-user-friends"></i> &nbsp;Quines Somos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="fa fa-envelope-square"></i> &nbsp;Contacto</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="fa fa-chart-area"></i> &nbsp;Publicidad</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="fa fa-file-alt"></i> &nbsp;Privacidad</a>
+					</li>
+					
+				</ul>
+			</div>
+			
+	</nav>
 </body>
 </html>

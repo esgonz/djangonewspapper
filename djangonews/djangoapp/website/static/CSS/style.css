@@ -29,13 +29,31 @@ p{
     color:#202124;
 }
 
+.container{
+    margin-top: 110px;
+}
 
+.navbar{
+    height: 100px;
+
+}
 .navbar-dark{
     background-color: #870D20!important;
     box-shadow: 0em 0.2em 0.8em #444;
 
 }
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255, 1);
+    font-size: 18px;
+    text-decoration: none !important;
+}
 
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none !important;
+}
 
 .ads_banner_h{
     max-width: 720px !important;
@@ -92,7 +110,10 @@ text-size-adjust:100%;
     margin: 1em .5em 1em;
 
 }
-
+.cover_news {
+    margin-bottom: 1em;
+    /*color: white;*/
+}
 .cover_news_image {
 	position: relative;
     text-align: center;
@@ -132,6 +153,12 @@ text-size-adjust:100%;
     color: white !important;
 
 }
+.cover_news .cover_news_inner{
+    background: white;
+    box-shadow: 0.1em 0.2em 0.8em #444;
+    padding: 1.5em;
+}
+
 
 .cover_news_data {
 }
@@ -214,7 +241,7 @@ text-size-adjust:100%;
 
 
 .cover_color_2 {
-	background: #870D20;
+	background: #5E000F;
 }
 
 
@@ -259,7 +286,6 @@ text-size-adjust:100%;
 .last-news .list li {
     list-style: none;
     padding: 0px 0px 8px 0px;
-    border-bottom: 1px solid #444
 
 }
 .last-news .list li a{
@@ -273,5 +299,55 @@ margin-top: 1em;
 .news-list .cover_news_c{
     margin-bottom: 1em;
 }
+.news-list .cover_news_c .title{
+    text-align: left !important;
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 16px;
+    margin: 0 0 8px;
+}
 
 
+
+
+.sidebar{
+    background: #fff;
+    box-shadow: 0em 0.2em 0.8em #444;
+
+}
+
+.category .list li {
+    list-style: none;
+    padding: 0px 0px 5px 0px;
+
+}
+.category .list li a{
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+
+.news-list {
+margin-top: .6em;
+}
+.news-list .cover_news_c{
+    margin-bottom: 1em;
+}
+
+.footer_ads{
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+
+
+
+
+
+/*FOOTER*/
+
+.navbar-footer{
+    background-color: #444 !important;
+    border-top : 10px solid #252525;
+}

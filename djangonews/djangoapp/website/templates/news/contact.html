@@ -1,0 +1,131 @@
+{# Load the tag library #}
+{% load bootstrap4 %}
+{% load fontawesome %}
+
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+{# Load static files #}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>News Today</title>
+	<link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+	  {% fontawesome_stylesheet %}
+	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+
+</head>
+<body>
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+			<a class="navbar-brand" href="#">
+		    	<img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+		  	</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="#"><i class="fa fa-home"></i> &nbsp; Portada <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="fa fa-map-marker"></i>&nbsp; Nacional</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="fa fa-globe"></i> &nbsp; Internacional</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="fa fa-baseball-ball"></i> &nbsp; Deporte</a>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="fa fa-dollar"></i> &nbsp; Negocios</a>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="fa fa-laptop"></i>&nbsp; Tecnologia</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="fa fa-stopwatch"></i>&nbsp; Actualidad</a>
+					</li>
+				</ul>
+			</div>
+	</nav>
+
+	<div class="container">
+
+
+	<div class="row">
+		<div class="col-lg-12">
+				<!--cover section cover_color_2-->
+		<div class="input-group input-group-sm mb-3">
+		  <div class="input-group-prepend">
+		    <span class="input-group-text" id="inputGroup-sizing-sm">Nombre</span>
+		  </div>
+		  <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+		</div>
+
+		<div class="input-group mb-3">
+		  <div class="input-group-prepend">
+		    <span class="input-group-text" id="inputGroup-sizing-default">Apellido</span>
+		  </div>
+		  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+		</div>
+
+		<div class="input-group input-group-lg">
+		  <div class="input-group-prepend">
+		    <span class="input-group-text" id="inputGroup-sizing-lg">Coreo Electronico</span>
+		  </div>
+		  <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+		</div>
+		
+		<div class="input-group input-group-lg">
+		  <div class="input-group-prepend">
+		    <span class="input-group-text" id="inputGroup-sizing-lg">Asunto</span>
+		  </div>
+		  <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+		</div>
+	</div>
+</div>
+		
+
+	</div>
+	<nav class="navbar  navbar-expand-lg navbar-dark navbar-footer">
+			<a class="navbar-brand" href="#">
+		    	<img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+		  	</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="#"><i class="fa fa-user-friends"></i> &nbsp;Quines Somos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="fa fa-envelope-square"></i> &nbsp;Contacto</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="fa fa-chart-area"></i> &nbsp;Publicidad</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="fa fa-file-alt"></i> &nbsp;Privacidad</a>
+					</li>
+					
+				</ul>
+			</div>
+			
+	</nav>
+</body>
+</html>

@@ -11,6 +11,8 @@ from .models import FeatureMedia
 from .models import Tags
 from .models import NewsTags
 from .models import Gallery
+from .models import Cover
+from .models import CoverNews
 # Register your models here.
 
 admin.site.register(News)
@@ -24,3 +26,5 @@ admin.site.register(FeatureMedia)
 admin.site.register(Tags)
 admin.site.register(NewsTags)
 admin.site.register(Gallery)
+admin.site.register(Cover)
+admin.site.register(CoverNews)

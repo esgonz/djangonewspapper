@@ -26,7 +26,7 @@
 <body>
 		<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
 			<a class="navbar-brand" href="#">
-		    	<img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+		    	<img src="{% static 'img/logonews.png' %}{{  ncc.news.feature_media.media.media_url }}" width="40" height="30" alt="">
 		  	</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -123,7 +123,7 @@
 					<div class="row">
 						
 						<!-- col1 -->
-						<div class="col-sm-6 cover_news_b">
+						<div class="col-sm-12 col-lg-6 cover_news_b">
 							<div class="cover_news_b_inner">
 								<div class="row">
 									<div class="col-sm-12 cover_news_image">
@@ -156,7 +156,7 @@
 						{% for ncc in main_news_c %}
 
 						<!-- col1 -->
-						<div class="col-sm-3 cover_news_c">
+						<div class="col-sm-6 col-lg-3 cover_news_c">
 							<div class="cover_news_c_inner">
 								<div class="row">
 									<div class="col-sm-12 cover_news_image">
@@ -220,7 +220,7 @@
 
 	<nav class="navbar  navbar-expand-lg navbar-dark navbar-footer">
 			<a class="navbar-brand" href="#">
-		    	<img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+		    	<img src="{% static 'img/logonews.png' %}{{  ncc.news.feature_media.media.media_url }}" width="40" height="30" alt="">
 		  	</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -231,7 +231,7 @@
 						<a class="nav-link" href="#"><i class="fa fa-user-friends"></i> &nbsp;Quines Somos</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#"><i class="fa fa-envelope-square"></i> &nbsp;Contacto</a>
+						<a class="nav-link" href="/website/contacto"><i class="fa fa-envelope-square"></i> &nbsp;Contacto</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#"><i class="fa fa-chart-area"></i> &nbsp;Publicidad</a>

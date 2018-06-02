@@ -48,8 +48,8 @@ def index(request):
     cover_national = getNews(1,2)
     cover_international = getNews(2,2)
     cover_sport = getNews(3,2)
-    cover_bussiness = getNews(5,2)
-    cover_tech = getNews(5,2)
+    cover_bussiness = getNews(4,2)
+    cover_tech = getNews(6,2)
     cover_life = getNews(5,2)
     
 
@@ -147,8 +147,32 @@ def results(request, question_id):
     response = "You're looking at the results of news %s."
     return HttpResponse(response % question_id)
 
+def contacto(request):
+    request.POST.get("nombre", "")
+    request.POST.get("apellido", "")
+    request.POST.get("email", "")
+    request.POST.get("mensaje", "")
+    msj_type = 0
+    msj =""
+    
+    if (request.POST.get("email", "")!=""):
+        msj_type = 1
+        msj ="Tu mensaje fue enviado Exitosamente." 
 
+    if (request.POST.get("mensaje", "")==""):
+        msj_type = 2
+        msj ="Ocurrio un problema con el mensaje, por favor completa el campo mensaje." 
+    
+
+    template = loader.get_template('news/contact.html')
+    context = {
+        'msj': msj,
+        'msj_type': msj_type 
+    }
+    return HttpResponse(template.render(context, request))
 
 def getNews(id_param, status):
     national = News.objects.filter(category__id= id_param).filter(status = status)
     return national
+
+

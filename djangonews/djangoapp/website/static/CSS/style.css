@@ -158,6 +158,10 @@ text-size-adjust:100%;
     box-shadow: 0.1em 0.2em 0.8em #444;
     padding: 1.5em;
 }
+.cover_news_inner h2{
+    text-align: center !important;
+}
+
 
 
 .cover_news_data {
@@ -209,6 +213,7 @@ text-size-adjust:100%;
 .cover_news_c .cover_news_data {
     text-align: justify;
     padding: .5em 1em .5em 1em;
+    min-height:  180px;
 }
 .cover_news_c .cover_news_data .category{
     
@@ -337,14 +342,26 @@ margin-top: .6em;
 
 .footer_ads{
     margin-top: 2em;
-    margin-bottom: 3em;
+    margin-bottom: 0 2em;
 }
 
 
+/*SINGLE*/
 
+.single_news{
+    max-width: 1040px;
+    margin: 0 auto !important;
+    padding: 2em;
+}
+.single_news h2, .single_news h4, .single_news h5{
+    text-align: center;
+}
 
-
-
+.single_news{
+    font-size: 1.1em;
+    line-height: 2em;
+    text-align: left;
+}
 /*FOOTER*/
 
 .navbar-footer{

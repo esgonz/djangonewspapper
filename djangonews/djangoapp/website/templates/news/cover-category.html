@@ -1,6 +1,5 @@
 {# Load the tag library #}
 {% load bootstrap4 %}
-{% load fontawesome %}
 
 
 {# Load CSS and JavaScript #}
@@ -20,7 +19,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>News Today</title>
 	<link rel="stylesheet" href="{% static 'CSS/style.css' %}">
-	  {% fontawesome_stylesheet %}
 	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
 
@@ -67,81 +65,86 @@
 
 
 
-				<!--cover section cover_color_2-->
-		<div class="row cover_color_2">
-	        <div class="col-sm-12 cover_block">
-	        	<h2><i class="fa fa-map-marker"></i> &nbsp; Nacional</h2>
-				
-				<!-- 3 secundary news -->
-			    <div class="row">
-			    	
-			    	<!-- col1 -->
-			        <div class="col-sm-6 cover_news_b">
-			        	<div class="cover_news_b_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/news/' %}{{  cover_national_b.news.feature_media.media.media_url }}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
+		<!--cover section cover_color_2-->
+			<div class="row cover_color_2">
+				<div class="col-sm-12 cover_block">
+					<h2><i class="fa fa-baseball-ball"></i> &nbsp; {{main_news_b.category.category }}</h2>
+					<!-- 3 secundary news -->
+					<div class="row">
 
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">{{  cover_national_b.news.category.category}}</a>
-				            		<h4 class="title">
-				            			{{  cover_national_b.news.title}}
-				            		</h4>
-				            		<p class="subhead">
-				            			{{  cover_national_b.news.subhead}}
+						<!-- col1 -->
+						<div class="col-sm-6 cover_news_b">
+							<div class="cover_news_b_inner">
+								<div class="row">
+									<div class="col-sm-12 cover_news_image">
+										<img src="{% static 'img/news/' %}{{  main_news_b.feature_media.media.media_url }}" alt="" class="img-fluid w-100">
+
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-sm-12 cover_news_data">
+										<a href="/website/news/{{ main_news_b.category.id }}" class="category">{{  main_news_b.category.category }}</a>
+										<h4 class="title">
+											{{  main_news_b.title }}
+										</h4>
+										<p class="subhead">
+											{{  main_news_b.subhead }}
+										</p>
 										<br>
-				            			<a href="#" class="">
-				            				Continuar Leyendo &rsaquo;
-				            			</a>
-				            		</p>
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
-					 {% for ncc in cover_main_news_c %}
-		       
-			        <!-- col1 -->
-			        <div class="col-sm-3 cover_news_c">
-			        	<div class="cover_news_c_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/news/' %}{{  ncc.news.feature_media.media.media_url }}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
+											<a href="/website/news/{{ main_news_b.id }}" class="">
+												Continuar Leyendo &rsaquo;
+											</a>
 
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">{{  ncc.news.category.category}}</a>
-				            		<h4 class="title">
-				            			{{  ncc.news.title}}
-				            		</h4>
-				            		<p class="subhead">
-				            			{{  ncc.news.subhead}}
-										<br>
-				            			<a href="#" class="">
-				            				Continuar Leyendo &rsaquo;
-				            			</a>
-				            		</p>
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
-		    		{% endfor %}
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/col1-->
 
+
+						<!--/col1-->
+						{% for mnc in main_news_c %}
+
+						<!-- col1 -->
+						<div class="col-sm-3 cover_news_c">
+							<div class="cover_news_c_inner">
+								<div class="row">
+									<div class="col-sm-12 cover_news_image">
+										<img src="{% static 'img/news/' %}{{  mnc.feature_media.media.media_url }}" alt="" class="img-fluid w-100">
+
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-sm-12 cover_news_data">
+										<a href="/website/news/{{ mnc.category.id }}" class="category">{{  mnc.category.category}}</a>
+										<h4 class="title">
+											{{  mnc.title}}
+										</h4>
+										<p class="subhead">
+											{{  mnc.subhead}}
+											
+										</p>
+
+											<a href="/website/news/{{ mnc.id }}" class="">
+												Continuar Leyendo &rsaquo;
+											</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/col1-->
+						{% endfor %}
+
+
+
+
+					</div>
+					<!-- /3 secundary news -->
 
 				</div>
-			    <!-- /3 secundary news -->
-				
-			</div>
-		</div> <!-- /cover section-->
-
+			</div> <!-- /cover section-->
 
 		
 		<br><br>
@@ -158,373 +161,43 @@
 				    
 
 					
-	        		<!-- col1 -->
-			        <div class="col-sm-4 cover_news_c">
-			        	<div class="cover_news_c_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
+	        		{% for news in news_list %}
 
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">Nacional</a>
-				            		<h4 class="title">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-				            		</h4>
-				            	
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
+						<!-- col1 -->
+						<div class="col-sm-3 cover_news_c">
+							<div class="cover_news_c_inner">
+								<div class="row">
+									<div class="col-sm-12 cover_news_image">
+										<img src="{% static 'img/news/' %}{{  news.feature_media.media.media_url }}" alt="" class="img-fluid w-100">
+
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-sm-12 cover_news_data">
+										<a href="/website/news/{{ news.category.id }}" class="category">{{  news.category.category}}</a>
+										<h4 class="title">
+											{{  news.title}}
+										</h4>
+										
+										<a href="/website/news/{{ news.id }}" class="">
+												Continuar Leyendo &rsaquo;
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/col1-->
+						{% endfor %}
 
 
-	
-
-			        <!-- col1 -->
-			        <div class="col-sm-4 cover_news_c">
-			        	<div class="cover_news_c_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
-
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">Nacional</a>
-				            		<h4 class="title">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-				            		</h4>
-				            	
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
-   
-					<!-- col1 -->
-			        <div class="col-sm-4 cover_news_c">
-			        	<div class="cover_news_c_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
-
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">Nacional</a>
-				            		<h4 class="title">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-				            		</h4>
-				            	
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
 					<!-- ads --> 
 					<div class="row">
 				        <div class="col-sm-12 ">
 				        	<img src="{% static 'img/ads/a6.png' %}" alt="" href="#" class="img-fluid w-100 ads_banner_h">
 				        </div>
 				    </div>
-					<!-- /ads -->
-
-						        		<!-- col1 -->
-			        <div class="col-sm-4 cover_news_c">
-			        	<div class="cover_news_c_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
-
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">Nacional</a>
-				            		<h4 class="title">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-				            		</h4>
-				            	
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
-
-
-	
-
-			        <!-- col1 -->
-			        <div class="col-sm-4 cover_news_c">
-			        	<div class="cover_news_c_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
-
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">Nacional</a>
-				            		<h4 class="title">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-				            		</h4>
-				            	
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
-   
-					<!-- col1 -->
-			        <div class="col-sm-4 cover_news_c">
-			        	<div class="cover_news_c_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
-
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">Nacional</a>
-				            		<h4 class="title">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-				            		</h4>
-				            	
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
-
-
-			        	        		<!-- col1 -->
-			        <div class="col-sm-4 cover_news_c">
-			        	<div class="cover_news_c_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
-
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">Nacional</a>
-				            		<h4 class="title">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-				            		</h4>
-				            	
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
-
-
-	
-
-			        <!-- col1 -->
-			        <div class="col-sm-4 cover_news_c">
-			        	<div class="cover_news_c_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
-
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">Nacional</a>
-				            		<h4 class="title">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-				            		</h4>
-				            	
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
-   
-					<!-- col1 -->
-			        <div class="col-sm-4 cover_news_c">
-			        	<div class="cover_news_c_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
-
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">Nacional</a>
-				            		<h4 class="title">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-				            		</h4>
-				            	
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
-
-			        	        		<!-- col1 -->
-			        <div class="col-sm-4 cover_news_c">
-			        	<div class="cover_news_c_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
-
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">Nacional</a>
-				            		<h4 class="title">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-				            		</h4>
-				            	
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
-
-
-	
-
-			        <!-- col1 -->
-			        <div class="col-sm-4 cover_news_c">
-			        	<div class="cover_news_c_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
-
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">Nacional</a>
-				            		<h4 class="title">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-				            		</h4>
-				            	
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
-   
-					<!-- col1 -->
-			        <div class="col-sm-4 cover_news_c">
-			        	<div class="cover_news_c_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
-
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">Nacional</a>
-				            		<h4 class="title">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-				            		</h4>
-				            	
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
-
-			        	        		<!-- col1 -->
-			        <div class="col-sm-4 cover_news_c">
-			        	<div class="cover_news_c_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
-
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">Nacional</a>
-				            		<h4 class="title">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-				            		</h4>
-				            	
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
-
-
-	
-
-			        <!-- col1 -->
-			        <div class="col-sm-4 cover_news_c">
-			        	<div class="cover_news_c_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
-
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">Nacional</a>
-				            		<h4 class="title">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-				            		</h4>
-				            	
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
-   
-					<!-- col1 -->
-			        <div class="col-sm-4 cover_news_c">
-			        	<div class="cover_news_c_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
-
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">Nacional</a>
-				            		<h4 class="title">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-				            		</h4>
-				            	
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
+					<!--/ ads --> 
    
 
 	<!-- col1 -->
@@ -536,7 +209,7 @@
 						    </li>
 						    <li class="page-item"><a class="page-link" href="#">1</a></li>
 						    <li class="page-item"><a class="page-link" href="#">2</a></li>
-						    <li class="page-item"><a class="page-link" href="#">3</a></li>
+			
 						    <li class="page-item">
 						      <a class="page-link" href="#">Siguiente</a>
 						    </li>
@@ -569,11 +242,12 @@
 
 	        		
 	        				<ul class="list">
-	        					<li><a href ="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam unde eaque, voluptas nostrum? Autem at, sunt, ullam tempora recusandae facere quod? Quae vitae, tenetur nihil voluptas eius itaque magni commodi.</a></li>
-	        					<li> <a href ="#"> voluptas nostrum? Autem at, sunt, ullam tempora  facere quod? Quae vitae, tenetur nihil voluptas eius itaque  commodi.</a></li>
-	        					<li><a href ="#">unt, ullam tempora recusandae facere quod? Quae vitae, tenetur nihil voluptas eius  magni commodi.</a></li>
-	        					<li><a href ="#"> unde eaque,  nostrum?  at, sunt, ullam tempora  facere quod? Quae , tenetur nihil voluptas eius itaque magni commodi.</a></li>
-	        					<li><a href ="#">   eaque,  nostrum? Autem at, sunt, ullam tempora recusandae facere ? Quae vitae, tenetur nihil  eius itaque  .</a></li>
+
+	        					{% for lnews in last_news %}
+	        					<li>
+	        						<a href ="#">{{ lnews.title}}</a>
+	        					</li>
+	        					{% endfor %}
 	        				</ul>
 	        
 	        		</div>

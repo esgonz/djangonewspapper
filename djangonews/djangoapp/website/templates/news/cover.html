@@ -1,7 +1,5 @@
 {# Load the tag library #}
 {% load bootstrap4 %}
-{% load fontawesome %}
-
 
 {# Load CSS and JavaScript #}
 {% bootstrap_css %}
@@ -20,47 +18,46 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>News Today</title>
 	<link rel="stylesheet" href="{% static 'CSS/style.css' %}">
-	  {% fontawesome_stylesheet %}
-	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
 
 </head>
 <body>
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
-			<a class="navbar-brand" href="#">
-		    	<img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
-		  	</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNavDropdown">
-				<ul class="navbar-nav">
-					<li class="nav-item active">
-						<a class="nav-link" href="#"><i class="fa fa-home"></i> &nbsp; Portada <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#"><i class="fa fa-map-marker"></i>&nbsp; Nacional</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#"><i class="fa fa-globe"></i> &nbsp; Internacional</a>
-					</li>
+		<a class="navbar-brand" href="#">
+			<img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="#"><i class="fa fa-home"></i> &nbsp; Portada <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#"><i class="fa fa-map-marker"></i>&nbsp; Nacional</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#"><i class="fa fa-globe"></i> &nbsp; Internacional</a>
+				</li>
 
-					<li class="nav-item">
-						<a class="nav-link" href="#"><i class="fa fa-baseball-ball"></i> &nbsp; Deporte</a>
-					</li>
-					
-					<li class="nav-item">
-						<a class="nav-link" href="#"><i class="fa fa-dollar"></i> &nbsp; Negocios</a>
-					</li>
-					
-					<li class="nav-item">
-						<a class="nav-link" href="#"><i class="fa fa-laptop"></i>&nbsp; Tecnologia</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#"><i class="fa fa-stopwatch"></i>&nbsp; Actualidad</a>
-					</li>
-				</ul>
-			</div>
+				<li class="nav-item">
+					<a class="nav-link" href="#"><i class="fa fa-baseball-ball"></i> &nbsp; Deporte</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="#"><i class="fa fa-dollar"></i> &nbsp; Negocios</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="#"><i class="fa fa-laptop"></i>&nbsp; Tecnologia</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#"><i class="fa fa-stopwatch"></i>&nbsp; Actualidad</a>
+				</li>
+			</ul>
+		</div>
 	</nav>
 
 	<div class="container">
@@ -71,492 +68,499 @@
 
 		<!-- ads --> 
 		<div class="row">
-	        <div class="col-sm-12 ">
-	        	<img src="{% static 'img/ads/a8.png' %}" alt="" href="#" class="img-fluid w-100 ads_banner_h">
-	        </div>
-	    </div>
+			<div class="col-sm-12 ">
+				<img src="{% static 'img/ads/a8.png' %}" alt="" href="#" class="img-fluid w-100 ads_banner_h">
+			</div>
+		</div>
 		<!-- /ads -->
 
 
 
 		<!--cover section-->
 		<div class="row">
-	        <div class="col-sm-12 cover_block">
-	        	<h2>
-	        		<i class="fa fa-home"></i> &nbsp; 
-	        	Portada</h2>
+			<div class="col-sm-12 cover_block">
+				<h2>
+					<i class="fa fa-home"></i> &nbsp; 
+				Portada</h2>
 				
 				<!-- main news -->
-
-
 				<div class="row">
-			        <div class="col-sm-12 cover_news">
+					<div class="col-sm-12 cover_news">
 						<div class="cover_news_inner">
 
-			            <div class="row">
-			            	<div class="col-sm-12 cover_news_image">
-			            		<img src="{% static 'img/news/' %}{{  cover_main_news.news.feature_media.media.media_url }}" alt="" class="img-fluid w-100">
-								<div class="cover_news_head_box">
-									<a href="#" class="category">
-										Nacional
-									</a>
-									<h4 class="title">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-									</h4>
+							<div class="row">
+								<div class="col-sm-12 cover_news_image">
+									<img src="{% static 'img/news/' %}{{  cover_main_news.news.feature_media.media.media_url }}" alt="" class="img-fluid w-100">
+									<div class="cover_news_head_box">
+										<a href="/website/category/{{  cover_main_news.news.category.id }}" class="category">
+											
+											{{  cover_main_news.news.category.category }}
+										</a>
+										<h4 class="title">
+
+											{{  cover_main_news.news.title }}
+										</h4>
+									</div>
 								</div>
-			            	</div>
-			            </div>
+							</div>
 
-			            <div class="row">
-			            	<div class="col-sm-12 cover_news_data">
-			            		<p class="subhead">
-			            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim nemo quibusdam reiciendis eius neque. Cupiditate quam ex blanditiis, similique ab illum eveniet omnis ipsam placeat rerum. Perferendis debitis obcaecati aperiam?
-			            			<a href="#" class="">
-			            				Continuar Leyendo &rsaquo;
-			            			</a>
-								</p>
+							<div class="row">
+								<div class="col-sm-12 cover_news_data">
+									<p class="subhead">
+										{{  cover_main_news.news.subhead }}
+										<a href="/website/news/{{  cover_main_news.news.id }}" class="">
+											Continuar Leyendo &rsaquo;
+										</a>
+									</p>
 
-			            </div>
-			            </div>
-</div>	        </div>
-			        
-			    </div>
+								</div>
+							</div>
+						</div>	        </div>
+
+				</div>
 				<!-- /main news -->
-				<!-- 3 secundary news -->
-			    <div class="row">
-			    	
-			    	<!-- col1 -->
-			        <div class="col-sm-6 cover_news_b">
-			        	<div class="cover_news_b_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/news/' %}{{  cover_main_news_b.news.feature_media.media.media_url }}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
+					<!-- 3 secundary news -->
+					<div class="row">
 
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">{{  cover_main_news_b.news.category.category}}</a>
-				            		<h4 class="title">
-				            			{{  cover_main_news_b.news.title}}
-				            		</h4>
-				            		<p class="subhead">
-				            			{{  cover_main_news_b.news.subhead}}
+						<!-- col1 -->
+						<div class="col-sm-6 cover_news_b">
+							<div class="cover_news_b_inner">
+								<div class="row">
+									<div class="col-sm-12 cover_news_image">
+										<img src="{% static 'img/news/' %}{{  cover_main_news_b.news.feature_media.media.media_url }}" alt="" class="img-fluid w-100">
+
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-sm-12 cover_news_data">
+										<a href="/website/category/{{  cover_main_news_b.news.category.id }}" class="category">
+											{{  cover_main_news_b.news.category.category}}
+										</a>
+										<h4 class="title">
+											{{  cover_main_news_b.news.title}}
+										</h4>
+										<p class="subhead">
+											{{  cover_main_news_b.news.subhead}}
+										</p>
 										<br>
-				            			<a href="#" class="">
-				            				Continuar Leyendo &rsaquo;
-				            			</a>
-				            		</p>
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
-					 {% for ncc in cover_main_news_c %}
-		       
-			        <!-- col1 -->
-			        <div class="col-sm-3 cover_news_c">
-			        	<div class="cover_news_c_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/news/' %}{{  ncc.news.feature_media.media.media_url }}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
+										<a href="/website/news/{{  cover_main_news_b.news.id }}" class="category">
+												Continuar Leyendo &rsaquo;
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/col1-->
+						{% for ncc in cover_main_news_c %}
 
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">{{  ncc.news.category.category}}</a>
-				            		<h4 class="title">
-				            			{{  ncc.news.title}}
-				            		</h4>
-				            		<p class="subhead">
-				            			{{  ncc.news.subhead}}
+						<!-- col1 -->
+						<div class="col-sm-3 cover_news_c">
+							<div class="cover_news_c_inner">
+								<div class="row">
+									<div class="col-sm-12 cover_news_image">
+										<img src="{% static 'img/news/' %}{{  ncc.news.feature_media.media.media_url }}" alt="" class="img-fluid w-100">
+
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-sm-12 cover_news_data">
+										<a href="/website/category/{{  ncc.news.category.id }}" class="category">
+											{{  ncc.news.category.category}}
+										</a>
+										<h4 class="title">
+											{{  ncc.news.title}}
+										</h4>
+										<p class="subhead">
+											{{  ncc.news.subhead}}
+										</p>	
 										<br>
-				            			<a href="#" class="">
-				            				Continuar Leyendo &rsaquo;
-				            			</a>
-				            		</p>
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
-		    		{% endfor %}
+											<a href="/website/news/{{  ncc.news.id }}" class="">
+												Continuar Leyendo &rsaquo;
+											</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/col1-->
+						{% endfor %}
 
+
+					</div>
+					<!-- /3 secundary news -->
+				</div>
+			</div> <!-- /cover section-->
+
+
+
+			<!-- ads --> 
+			<div class="row">
+				<div class="col-sm-12 ">
+					<img src="{% static 'img/ads/a1.png' %}" alt="" href="#" class="img-fluid w-100 ads_banner_h">
+				</div>
+			</div>
+			<!-- /ads -->
+
+
+			<!--cover section cover_color_2-->
+			<div class="row cover_color_2">
+				<div class="col-sm-12 cover_block">
+					<h2><i class="fa fa-map-marker"></i> &nbsp; Nacional</h2>
+
+					<!-- 3 secundary news -->
+					<div class="row">
+
+						<!-- col1 -->
+						<div class="col-sm-6 cover_news_b">
+							<div class="cover_news_b_inner">
+								<div class="row">
+									<div class="col-sm-12 cover_news_image">
+										<img src="{% static 'img/news/' %}{{  cover_national_b.feature_media.media.media_url }}" alt="" class="img-fluid w-100">
+
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-sm-12 cover_news_data">
+										<a href="/website/category/{{ cover_national_b.category.id }}" class="category">
+											{{  cover_national_b.category.category }}
+										</a>
+										<h4 class="title">
+											{{  cover_national_b.title }}
+										</h4>
+										<p class="subhead">
+											{{  cover_national_b.subhead }}
+										</p>
+										<br>
+										<a href="/website/news/{{  cover_national_b.id }}" class="">
+												Continuar Leyendo &rsaquo;
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/col1-->
+						{% for ncc in cover_national_c %}
+
+						<!-- col1 -->
+						<div class="col-sm-3 cover_news_c">
+							<div class="cover_news_c_inner">
+								<div class="row">
+									<div class="col-sm-12 cover_news_image">
+										<img src="{% static 'img/news/' %}{{  ncc.feature_media.media.media_url }}" alt="" class="img-fluid w-100">
+
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-sm-12 cover_news_data">
+										<a href="/website/category/{{ ncc.category.id }}" class="category">
+										{{  ncc.category.category}}</a>
+										<h4 class="title">
+											{{  ncc.title}}
+										</h4>
+										<p class="subhead">
+											{{  ncc.subhead}}
+											
+										</p>
+										<br>
+											<a href="/website/news/{{  ncc.id }}" class="">
+												Continuar Leyendo &rsaquo;
+											</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/col1-->
+						{% endfor %}
+
+
+					</div>
+					<!-- /3 secundary news -->
 
 				</div>
-			    <!-- /3 secundary news -->
-			</div>
-		</div> <!-- /cover section-->
-		
-		
-
-		<!-- ads --> 
-		<div class="row">
-	        <div class="col-sm-12 ">
-	        	<img src="{% static 'img/ads/a1.png' %}" alt="" href="#" class="img-fluid w-100 ads_banner_h">
-	        </div>
-	    </div>
-		<!-- /ads -->
+			</div> <!-- /cover section-->
 
 
-		<!--cover section cover_color_2-->
-		<div class="row cover_color_2">
-	        <div class="col-sm-12 cover_block">
-	        	<h2><i class="fa fa-map-marker"></i> &nbsp; Nacional</h2>
-				
-				<!-- 3 secundary news -->
-			    <div class="row">
-			    	
-			    	<!-- col1 -->
-			        <div class="col-sm-6 cover_news_b">
-			        	<div class="cover_news_b_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/news/' %}{{  cover_national_b.news.feature_media.media.media_url }}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
-
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">{{  cover_national_b.news.category.category}}</a>
-				            		<h4 class="title">
-				            			{{  cover_national_b.news.title}}
-				            		</h4>
-				            		<p class="subhead">
-				            			{{  cover_national_b.news.subhead}}
-										<br>
-				            			<a href="#" class="">
-				            				Continuar Leyendo &rsaquo;
-				            			</a>
-				            		</p>
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
-					 {% for ncc in cover_main_news_c %}
-		       
-			        <!-- col1 -->
-			        <div class="col-sm-3 cover_news_c">
-			        	<div class="cover_news_c_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/news/' %}{{  ncc.news.feature_media.media.media_url }}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
-
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">{{  ncc.news.category.category}}</a>
-				            		<h4 class="title">
-				            			{{  ncc.news.title}}
-				            		</h4>
-				            		<p class="subhead">
-				            			{{  ncc.news.subhead}}
-										<br>
-				            			<a href="#" class="">
-				            				Continuar Leyendo &rsaquo;
-				            			</a>
-				            		</p>
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
-		    		{% endfor %}
-
-
+			<!-- ads --> 
+			<div class="row">
+				<div class="col-sm-12 ">
+					<img src="{% static 'img/ads/a6.png' %}" alt="" href="#" class="img-fluid w-100 ads_banner_h">
 				</div>
-			    <!-- /3 secundary news -->
-				
 			</div>
-		</div> <!-- /cover section-->
-
-
-		<!-- ads --> 
-		<div class="row">
-	        <div class="col-sm-12 ">
-	        	<img src="{% static 'img/ads/a6.png' %}" alt="" href="#" class="img-fluid w-100 ads_banner_h">
-	        </div>
-	    </div>
-		<!-- /ads -->
+			<!-- /ads -->
 
 
 
-		<!--cover section-->
-		<div class="row">
-	        <div class="col-sm-12 cover_block">
-	        	<h2><i class="fa fa-globe"></i> &nbsp; Internacional</h2>
-
+			<!--cover section-->
+			<div class="row">
 				<!-- main news -->
 				<div class="row">
-			        <div class="col-sm-12 cover_news">
-			            <div class="row">
-			            	<div class="col-sm-12 cover_news_image">
-			            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								<div class="cover_news_head_box">
-									<a href="#" class="category">
-										Category
-									</a>
-									<h4 class="title">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-									</h4>
+					<!-- col1 -->
+						<div class="col-sm-12 cover_news">
+							<div class="cover_news_inner">
+								<h2> <i class="fa fa-dollar-sign"></i> &nbsp;  Economia</h2>
+							<div class="row">
+								<div class="col-sm-12 cover_news_image">
+									<img src="{% static 'img/news/' %}{{  cover_international.feature_media.media.media_url }}" alt="" class="img-fluid w-100">
+									<div class="cover_news_head_box">
+										<a href="/website/news/{{  cover_international.category.id }}" class="">
+											{{  cover_international.category.category }}
+										</a>
+										<h4 class="title">
+											{{  cover_international.title }}
+										</h4>
+									</div>
 								</div>
-			            	</div>
-			            </div>
+							</div>
 
-			            <div class="row">
-			            	<div class="col-sm-12 cover_news_data">
-			            		<p class="subhead">
-			            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi deleniti saepe tempore! Aliquam repudiandae distinctio tempora nesciunt maiores tempore, dicta minus, ad soluta molestias neque rem deserunt asperiores aut. Nostrum. 
-			            			<a href="#" class="">
-			            				Continuar Leyendo &rsaquo;
-			            			</a>
-								</p>
+							<div class="row">
+								<div class="col-sm-12 cover_news_data">
+									<p class="subhead">
+										{{  cover_international.subhead }}
+										
+									</p>
+									<a href="/website/news/{{  cover_international.id }}" class="">
+											Continuar Leyendo &rsaquo;
+										</a>
 
-			            </div>
-			            </div>
-			        </div>
-			        
-			    </div>
+								</div>
+							</div>
+						</div>	        
+					</div>
 
-			</div>
-		</div> <!-- /cover section-->
-		
-
-
-		<!--cover section cover_color_2-->
-		<div class="row cover_color_2">
-	        <div class="col-sm-12 cover_block">
-	        	<h2><i class="fa fa-baseball-ball"></i> &nbsp; Deportes</h2>
-				<!-- 3 secundary news -->
-			    <div class="row">
-			    	
-			    	<!-- col1 -->
-			        <div class="col-sm-6 cover_news_b">
-			        	<div class="cover_news_b_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
-
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">Category</a>
-				            		<h4 class="title">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-				            		</h4>
-				            		<p class="subhead">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi deleniti saepe tempore! Aliquam repudiandae distinctio tempora nesciunt maiores tempore, dicta minus, ad soluta molestias neque rem deserunt asperiores aut. Nostrum.
-										<br>
-				            			<a href="#" class="">
-				            				Continuar Leyendo &rsaquo;
-				            			</a>
-				            		</p>
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
-
-			        <!-- col1 -->
-			        <div class="col-sm-3 cover_news_c">
-			        	<div class="cover_news_c_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
-
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">Category</a>
-				            		<h4 class="title">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-				            		</h4>
-				            		<p class="subhead">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi deleniti saepe tempore! Aliquam repudiandae distinctio tempora nesciunt maiores tempore, dicta minus, ad soluta molestias neque rem deserunt asperiores aut. Nostrum.
-										<br>
-				            			<a href="#" class="">
-				            				Continuar Leyendo &rsaquo;
-				            			</a>
-				            		</p>
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
-
-			        <!-- col1 -->
-			        <div class="col-sm-3 cover_news_c">
-			        	<div class="cover_news_c_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
-
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">Category</a>
-				            		<h4 class="title">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-				            		</h4>
-				            		<p class="subhead">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi deleniti saepe tempore! Aliquam repudiandae distinctio tempora nesciunt maiores tempore, dicta minus, ad soluta molestias neque rem deserunt asperiores aut. Nostrum.
-										<br>
-				            			<a href="#" class="">
-				            				Continuar Leyendo &rsaquo;
-				            			</a>
-				            		</p>
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
 				</div>
-			    <!-- /3 secundary news -->
+				<!-- /main news -->
+
+
 				
+			</div> <!-- /cover section-->
+
+
+
+			<!--cover section cover_color_2-->
+			<div class="row cover_color_2">
+				<div class="col-sm-12 cover_block">
+					<h2><i class="fa fa-baseball-ball"></i> &nbsp; Deportes</h2>
+					<!-- 3 secundary news -->
+					<div class="row">
+
+						<!-- col1 -->
+						<div class="col-sm-6 cover_news_b">
+							<div class="cover_news_b_inner">
+								<div class="row">
+									<div class="col-sm-12 cover_news_image">
+										<img src="{% static 'img/news/' %}{{  cover_sport_b.feature_media.media.media_url }}" alt="" class="img-fluid w-100">
+
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-sm-12 cover_news_data">
+										<a href="/website/category/{{cover_sport_b.category.id}}" class="category">
+											{{  cover_sport_b.category.category }}
+										</a>
+										<h4 class="title">
+											{{  cover_sport_b.title }}
+										</h4>
+										<p class="subhead">
+											{{  cover_sport_b.subhead }}
+											
+										</p>
+										<br>
+											<a href="/website/news/{{cover_sport_b.id}}" class="">
+												Continuar Leyendo &rsaquo;
+											</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/col1-->
+
+
+						<!--/col1-->
+						{% for csc in cover_sport_c %}
+
+						<!-- col1 -->
+						<div class="col-sm-3 cover_news_c">
+							<div class="cover_news_c_inner">
+								<div class="row">
+									<div class="col-sm-12 cover_news_image">
+										<img src="{% static 'img/news/' %}{{  csc.feature_media.media.media_url }}" alt="" class="img-fluid w-100">
+
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-sm-12 cover_news_data">
+										<a href="/website/category/{{csc.category.id}}" class="category">
+											{{  csc.category.category}}
+										</a>
+										<h4 class="title">
+											{{  csc.title}}
+										</h4>
+										<p class="subhead">
+											{{  csc.subhead}}
+											
+										</p>
+										<br>
+											<a href="/website/news/{{cover_sport_c.id}}" class="">
+												Continuar Leyendo &rsaquo;
+											</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/col1-->
+						{% endfor %}
+
+
+
+
+					</div>
+					<!-- /3 secundary news -->
+
+				</div>
+			</div> <!-- /cover section-->
+
+
+
+
+			<!-- ads --> 
+			<div class="row">
+				<div class="col-sm-12 ">
+					<img src="{% static 'img/ads/a6.png' %}" alt="" href="#" class="img-fluid w-100 ads_banner_h">
+				</div>
 			</div>
-		</div> <!-- /cover section-->
+			<!-- /ads -->
+
+			<!--cover section-->
+			<div class="row">
+				<div class="col-sm-12 cover_block">
 
 
+					<!--3 secundary news -->
+					<div class="row">
 
+						<!-- col1 -->
+						<div class="col-sm-12 cover_news">
+							<div class="cover_news_inner">
+								<h2> <i class="fa fa-dollar-sign"></i> &nbsp;  Economia</h2>
+							
+								<div class="row">
+									<div class="col-sm-12 cover_news_image">
+										<img src="{% static 'img/news/' %}{{  cover_bussiness.feature_media.media.media_url }}" alt="" class="img-fluid w-100">
 
-		<!-- ads --> 
-		<div class="row">
-	        <div class="col-sm-12 ">
-	        	<img src="{% static 'img/ads/a1.png' %}" alt="" href="#" class="img-fluid w-100 ads_banner_h">
-	        </div>
-	    </div>
-		<!-- /ads -->
+									</div>
+								</div>
 
-		<!--cover section-->
-		<div class="row">
-	        <div class="col-sm-12 cover_block">
-	   
-		
-				<!--3 secundary news -->
-			    <div class="row">
-			    	
-			    	<!-- col1 -->
-			        <div class="col-sm-12 cover_news_b">
-			        	<div class="cover_news_inner">
-				        	<h2> <i class="fa fa-dollar"></i> &nbsp;  Economia</h2>
-
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
-
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">Category</a>
-				            		<h4 class="title">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-				            		</h4>
-				            		<p class="subhead">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi deleniti saepe tempore! Aliquam repudiandae distinctio tempora nesciunt maiores tempore, dicta minus, ad soluta molestias neque rem deserunt asperiores aut. Nostrum.
+								<div class="row">
+									<div class="col-sm-12 cover_news_data">
+										<a href="/website/category/{{cover_bussiness.category.id}}" class="category">
+										
+											{{ cover_bussiness.category.category }}
+										</a>
+										<h4 class="title">
+											{{ cover_bussiness.title }}
+										</h4>
+										<p class="subhead">
+											{{ cover_bussiness.subhead }}
+											
+										</p>
 										<br>
-				            			<a href="#" class="">
-				            				Continuar Leyendo &rsaquo;
-				            			</a>
-				            		</p>
-				            	</div>
-				            </div>
-				        </div>
+											<a href="/website/news/{{cover_bussiness.id}}" class="">
+												Continuar Leyendo &rsaquo;
+											</a>
+									</div>
+								</div>
+							</div>
 
-			        </div>
-			        <!--/col1-->
+						</div>
+						<!--/col1-->
 
-			        <!-- col1 -->
-			        <div class="col-sm-6 cover_news_b">
-			        	<div class="cover_news_b_inner">
-				        	<h2> <i class="fa fa-laptop"></i> &nbsp;  Tecnologia</h2>
+						<!-- col1 -->
+						<div class="col-sm-6 cover_news_b">
+							<div class="cover_news_b_inner">
+								<h2> <i class="fa fa-laptop"></i> &nbsp;  Tecnologia</h2>
 
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
+								<div class="row">
+									<div class="col-sm-12 cover_news_image">
+										<img src="{% static 'img/news/' %}{{  cover_tech_b.feature_media.media.media_url }}" alt="" class="img-fluid w-100">
 
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">Category</a>
-				            		<h4 class="title">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-				            		</h4>
-				            		<p class="subhead">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi deleniti saepe tempore! Aliquam repudiandae distinctio tempora nesciunt maiores tempore, dicta minus, ad soluta molestias neque rem deserunt asperiores aut. Nostrum.
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-sm-12 cover_news_data">
+										<a href="/website/category/{{cover_tech_b.category.id}}" class="category">
+											{{ cover_tech_b.category.category }}
+										</a>
+										<h4 class="title">
+											{{ cover_tech_b.title }}
+										</h4>
+										<p class="subhead">
+											{{ cover_tech_b.subhead }}
+											
+										</p>
 										<br>
-				            			<a href="#" class="">
-				            				Continuar Leyendo &rsaquo;
-				            			</a>
-				            		</p>
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
+											<a href="/website/news/{{cover_tech_b.id}}" class="">
+												Continuar Leyendo &rsaquo;
+											</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/col1-->
 
-			        <!-- col1 -->
-			        <div class="col-sm-6 cover_news_b">
-			        	<div class="cover_news_b_inner">
-				        	<h2><i class="fa fa-stopwatch"></i> &nbsp; Actualidad</h2>
+						<!-- col1 -->
+						<div class="col-sm-6 cover_news_b">
+							<div class="cover_news_b_inner">
+								<h2><i class="fa fa-stopwatch"></i> &nbsp; Actualidad</h2>
 
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
+								<div class="row">
+									<div class="col-sm-12 cover_news_image">
+										<img src="{% static 'img/news/' %}{{  cover_life_b.feature_media.media.media_url }}" alt="" class="img-fluid w-100">
+									</div>
+								</div>
 
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">Category</a>
-				            		<h4 class="title">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-				            		</h4>
-				            		<p class="subhead">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi deleniti saepe tempore! Aliquam repudiandae distinctio tempora nesciunt maiores tempore, dicta minus, ad soluta molestias neque rem deserunt asperiores aut. Nostrum.
+								<div class="row">
+									<div class="col-sm-12 cover_news_data">
+										<a href="/website/category/{{cover_life_b.category.id}}" class="category">
+											{{ cover_life_b.category.category }}
+										</a>
+										<h4 class="title">
+												{{ cover_life_b.title }}
+										</h4>
+										<p class="subhead">
+												{{ cover_life_b.subhead }}
+											
+										</p>
 										<br>
-				            			<a href="#" class="">
-				            				Continuar Leyendo &rsaquo;
-				            			</a>
-				            		</p>
-				            	</div>
-				            </div>
-			        	</div>
-			        </div>
-			        <!--/col1-->
-			        
-			    </div>
-			</div>
-		</div> <!-- /cover section-->
-		
-		
-		
+											<a href="/website/news/{{cover_life_b.id}}" class="">
+												Continuar Leyendo &rsaquo;
+											</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/col1-->
 
-	</div>
+					</div>
+				</div>
+			</div> <!-- /cover section-->
 
 
 
-	<nav class="navbar  navbar-expand-lg navbar-dark navbar-footer">
+
+		</div>
+
+
+
+		<nav class="navbar  navbar-expand-lg navbar-dark navbar-footer">
 			<a class="navbar-brand" href="#">
-		    	<img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
-		  	</a>
+				<img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -578,6 +582,6 @@
 				</ul>
 			</div>
 			
-	</nav>
-</body>
-</html>
+		</nav>
+	</body>
+	</html>

@@ -45,32 +45,73 @@ def index(request):
 
 
 
-    cover_national = News.objects.filter(category__category="Nacional")
-    cover_international = News.objects.filter(category__id = 2)[:1]
-    cover_sport = News.objects.filter(category__id = 3)[:3]
-    cover_bussiness = News.objects.filter(category__id = 5)[:1]
-    cover_tech = News.objects.filter(category__id = 5)[:1]
-    cover_life = News.objects.filter(category__id = 5)[:1]
+    cover_national = getNews(1,2)
+    cover_international = getNews(2,2)
+    cover_sport = getNews(3,2)
+    cover_bussiness = getNews(5,2)
+    cover_tech = getNews(5,2)
+    cover_life = getNews(5,2)
+    
 
+    
 
-
-    template = loader.get_template('news/contact.html')
+    template = loader.get_template('news/cover.html')
     context = {
         'cover_main_news': latest_cover_list[0],
         'cover_main_news_b': latest_cover_list[1],
         'cover_main_news_c': [latest_cover_list[2], latest_cover_list[3]],
-        'cover_national_b': latest_cover_list[0],
-        'cover_national_c': [latest_cover_list[1], latest_cover_list[2]],
-        'cover_innational': cover_international[0],
+        'cover_national_b': cover_national[0],
+        'cover_national_c': [cover_national[1], cover_national[2]],
+        'cover_international': cover_international[0],
         'cover_sport_b': cover_sport[0],
-        'cover_national_c': [cover_sport[1], cover_sport[2]],
+        'cover_sport_c': [cover_sport[1], cover_sport[2]],
         'cover_bussiness': cover_bussiness[0],
-        'cover_tech_c': cover_tech[0],
-        'cover_life_c': cover_life[0]
+        'cover_tech_b': cover_tech[0],
+        'cover_life_b': cover_life[0]
     }
     return HttpResponse(template.render(context, request))
 
+    #output = ','.join([ str(n.category.category) for n in cover_national])
+    #return HttpResponse(output)
 
+
+def category(request, category_id):
+    main_news = getNews(category_id, 2)
+    list_news = getNews(category_id, 2)
+    last_news = News.objects.all()[:5]
+    
+
+ 
+    template = loader.get_template('news/cover-category.html')
+    context = {
+        'main_news_b': main_news[1],
+        'main_news_c': [main_news[2], main_news[3]],
+        'news_list': list_news,
+        'last_news': last_news
+    }
+    return HttpResponse(template.render(context, request))
+
+    #output = ','.join([ str(n.category.category) for n in cover_national])
+    #return HttpResponse(output)
+
+def single(request, news_id):
+    #return HttpResponse("You're looking at news %s." % news_id)
+
+
+    news = News.objects.get(pk=news_id)
+    list_news = getNews(news.category.id, 2)
+    last_news = News.objects.all()[:5]
+    
+
+ 
+    template = loader.get_template('news/single.html')
+    context = {
+        'main_news_b': list_news[1],
+        'main_news_c': [list_news[2], list_news[3]],
+        'news': news,
+        'last_news': last_news
+    }
+    return HttpResponse(template.render(context, request))
 
 
 
@@ -82,6 +123,8 @@ def results(request, question_id):
     response = "You're looking at the results of news %s."
     return HttpResponse(response % question_id)
 
-def eduardo(request, age):
-	response ="Hola Eduardo tu edad es %d"
-	return HttpResponse(response %age)
+
+
+def getNews(id_param, status):
+    national = News.objects.filter(category__id= id_param).filter(status = status)
+    return national

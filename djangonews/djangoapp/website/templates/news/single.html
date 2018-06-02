@@ -1,6 +1,5 @@
 {# Load the tag library #}
 {% load bootstrap4 %}
-{% load fontawesome %}
 
 
 {# Load CSS and JavaScript #}
@@ -20,7 +19,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>News Today</title>
 	<link rel="stylesheet" href="{% static 'CSS/style.css' %}">
-	  {% fontawesome_stylesheet %}
 	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
 
@@ -72,233 +70,131 @@
 		<!-- ads --> 
 		<div class="row">
 	        <div class="col-sm-12 ">
-	        	<img src="{% static 'img/ads/a8.png' %}" alt="" href="#" class="img-fluid w-100 ads_banner_h">
+	        	<img src="{% static 'img/ads/a7.png' %}" alt="" href="#" class="img-fluid w-100 ads_banner_h">
 	        </div>
 	    </div>
 		<!-- /ads -->
 
 		<!--cover section-->
 		<div class="row">
-	        <div class="col-sm-12 cover_block">
-	        	<h4><i class="fa fa-map-marker"></i>&nbsp;Nacional</h4>
-	        	<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet</h2>
+	        <div class="col-sm-12 single_news">
+	        	<h4>	
+	        		<a href="/website/category/{{news.category.id}}" title="">
+					
+	        		{{news.category.category}}
+	        		</a>
+	        	</h4>
+
+	        	<h5>{{news.epigraph}}</h5>
+	        	<h2>{{news.title}}</h2>
 
 				<!-- main news -->
 				<div class="row">
 			        <div class="col-sm-12 cover_news">
-			            <div class="row">
-			            	<div class="col-sm-12 cover_news_image">
-			            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								<div class="cover_news_head_box">
-		
-									<h4 class="title">
-										Según el relato del Ministerio Público, los hechos tuvieron lugar en el
-									    bulevar de Avroy del centro de Lieja, en torno a las 10:30 y las 11:30. El
-									    individuo se abalanzó por detrás contra las dos mujeres policía, de 45 y 53
-									    años
-									</h4>
-								</div>
-			            	</div>
-			            </div>
+			        	<div class="cover_news_inner">
+				            <div class="row">
+				            	<div class="col-sm-12 cover_news_image">
+				            		<img src="{% static 'img/news/' %}{{news.feature_media.media.media_url}}" alt="" class="img-fluid w-100">
+									<div class="cover_news_head_box">
+			
+										<h4 class="title">
+											{{news.subhead}}
+										</h4>
+									</div>
+				            	</div>
+				            </div>
 
-			            <div class="row">
-			            	<div class="col-sm-12 cover_news_data">
-			            		<div class="subhead">
-			            			<p>
-									    Un hombre recién salido de la cárcel con un permiso temporal mató este
-									    martes a dos mujeres policías y a un civil e hirió a otras cuatro personas,
-									    dos de ellas agentes, en la ciudad de Lieja (Bélgica), en un ataque
-									    investigado por la Fiscalía federal como un “delito terrorista”.
-									</p>
-									<p>
-									    Según el relato del Ministerio Público, los hechos tuvieron lugar en el
-									    bulevar de Avroy del centro de Lieja, en torno a las 10:30 y las 11:30. El
-									    individuo se abalanzó por detrás contra las dos mujeres policía, de 45 y 53
-									    años, las atacó con un cuchillo, les arrebató sus armas de fuego y disparó
-									    sobre ellas causándoles la muerte, explicó el jefe de Policía de Lieja,
-									    Christian Beaupère, quien subrayó que el atacante “ejecutó” a las dos
-									    agentes.
-									</p>
-									<p>
-									    “Está claro que el objetivo era atacar a la policía” y “golpear a “la
-									    institución, al Estado de Bélgica”, agregó. Una agente, de 45 años era
-									    madre de un joven de 25 años; mientras que su compañera, de 53 años, tenía
-									    dos gemelos de 13 años que ya eran huérfanos de padre, agregó Beaupère.
-									</p>
-									<p>
-									    El atacante disparó a continuación contra un vehículo estacionado en la
-									    calle en el que resultó muerto un hombre que ocupaba el asiento de
-									    pasajero, un estudiante de magisterio de 22 años.
-									</p>
-									<h2>
-									    “¡Alá es grande!”
-									</h2>
-									<p>
-									    Después, el agresor huyó hacia el cercano instituto Léonie de Waha y tomó
-									    como rehén a dos trabajadoras de la limpieza del centro.
-									</p>
-									<p>
-									    El atacante salió entonces a la calle y abrió fuego contra los agentes que
-									    habían acudido al centro educativo, en un intercambio de disparos en el que
-									    el presunto terrorista resultó muerto y dos policías sufrieron heridas en
-									    los brazos. En total eran tres víctimas mortales y cuatro heridos, uno de
-									    ellos grave, indicó el jefe de Policía de Lieja.
-									</p>
-									<p>
-									    Fuentes policiales citadas por el diario local La Libre Belgique señalaron
-									    que el hombre gritó “¡Alá es grande!” antes de ser abatido, aunque esta
-									    información no ha sido confirmada por la Fiscalía.
-									</p>
-									<p>
-									    La cadena de radiotelevisión pública RTBF, por su parte, señaló que el
-									    asesino estaba fichado por las autoridades belgas como sospechoso de
-									    radicalización islámica desde 2017, extremo que tampoco ha confirmado el
-									    Ministerio Público.
-									</p>
-									<p>
-									    Los cerca de 800 alumnos de primaria y secundaria del centro fueron
-									    evacuados sanos y salvos, y el alcalde de la localidad, Willy Demeyer,
-									    señaló que la escuela permanecerá cerrada miércoles y jueves.
-									</p>
-									<p>
-									    La agencia belga identificó al atacante como Benjamin Herman, de 36 años y
-									    procedente de la localidad belga de Rochefort, que habría salido la víspera
-									    de la prisión de Lantin durante un permiso que se le concedió para
-									    “preparar su reinserción”.
-									</p>
-									<p>
-									    Cumplía condena por delitos menores como pequeños robos o narcotráfico y se
-									    sospecha que “podría haberse radicalizado en prisión”.
-									</p>
-									<p>
-									    El ministro de Justicia, Koen Geens, explicó que el autor de los hechos se
-									    había beneficiado ya de 11 autorizaciones de salida de la cárcel y de 11
-									    permisos penitenciarios sin que se registraran incidentes.
-									</p>
-									<p>
-									    El primer ministro belga, Charles Michel, se desplazó al lugar de los
-									    hechos, así como el rey Felipe de Bélgica. “Violencia ciega y cobarde. Todo
-									    nuestro apoyo a las víctimas y sus seres queridos. Seguimos la situación
-									    con los servicios de seguridad y el centro de crisis”, escribió en Twitter
-									    el jefe del Ejecutivo belga.
-									</p>
-									<p>
-									    Michel era ya primer ministro belga cuando el país sufrió en marzo de 2016
-									    el mayor atentado terrorista de su historia, en el que dos comandos de
-									    yihadistas suicidas mataron a 32 personas e hirieron a otras 340 en sendos
-									    ataques casi simultáneos perpetrados en el aeropuerto de Bruselas-Zaventem
-									    y la parada de metro de Maelbeek del barrio europeo.
-									</p>
-									<p>
-									    Desde entonces, Bélgica ha sido escenario de otros cuatro ataques o
-									    tentativas terroristas, el último de ellos en agosto de 2017, cuando un
-									    hombre atacó con un cuchillo a tres militares en el centro de Bruselas
-									    antes de ser abatido por las fuerzas del orden. El Centro de Crisis de
-									    Bélgica indicó que de momento no se planean cambios en el nivel de alerta
-									    terrorista, que se encuentra en 2 sobre un máximo de 4.
-									</p>
+				            <div class="row">
+				            	<div class="col-sm-12 cover_news_data">
+				            		<div class="subhead">
+				            			{{news.copy}}
+									</div>
 
-								</div>
-
-			            </div>
-			            </div>
+				            	</div>
+				            </div>
+			        	</div>
 			        </div>
 			        
 			    </div>
 				<!-- /main news -->
+				
+
 				<!-- 3 secundary news -->
-			    <div class="row">
-			    	<div class="col-sm-12">
-			    		<h3>Otras Noticias Nacionales</h3>
-			   		</div>
-			    	<!-- col1 -->
-			        <div class="col-sm-6 cover_news_b">
-			        	<div class="cover_news_b_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
+				<h3>Otras Noticias</h3>
+					<div class="row">
+						
+						<!-- col1 -->
+						<div class="col-sm-6 cover_news_b">
+							<div class="cover_news_b_inner">
+								<div class="row">
+									<div class="col-sm-12 cover_news_image">
+										<img src="{% static 'img/news/' %}{{  main_news_b.feature_media.media.media_url }}" alt="" class="img-fluid w-100">
 
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">Category</a>
-				            		<h4 class="title">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-				            		</h4>
-				            		<p class="subhead">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi deleniti saepe tempore! Aliquam repudiandae distinctio tempora nesciunt maiores tempore, dicta minus, ad soluta molestias neque rem deserunt asperiores aut. Nostrum.
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-sm-12 cover_news_data">
+										<a href="/website/category/{{main_news_b.category.id}}" class="category">
+											{{  main_news_b.category.category}}
+										</a>
+										<h4 class="title">
+											{{  main_news_b.title}}
+										</h4>
+										<p class="subhead">
+											{{  main_news_b.subhead}}
+											
+										</p>
 										<br>
-				            			<a href="#" class="">
-				            				Continuar Leyendo &rsaquo;
-				            			</a>
-				            		</p>
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
+											<a href="/website/news/{{main_news_b.id}}" title="">
+												Continuar Leyendo &rsaquo;
+											</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/col1-->
+						{% for ncc in main_news_c %}
 
-			        <!-- col1 -->
-			        <div class="col-sm-3 cover_news_c">
-			        	<div class="cover_news_c_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
+						<!-- col1 -->
+						<div class="col-sm-3 cover_news_c">
+							<div class="cover_news_c_inner">
+								<div class="row">
+									<div class="col-sm-12 cover_news_image">
+										<img src="{% static 'img/news/' %}{{  ncc.feature_media.media.media_url }}" alt="" class="img-fluid w-100">
 
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">Category</a>
-				            		<h4 class="title">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-				            		</h4>
-				            		<p class="subhead">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi deleniti saepe tempore! Aliquam repudiandae distinctio tempora nesciunt maiores tempore, dicta minus, ad soluta molestias neque rem deserunt asperiores aut. Nostrum.
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-sm-12 cover_news_data">
+										<a href="/website/news/{{ncc.category.id}}" class="category">{{  ncc.category.category}}</a>
+										<h4 class="title">
+											{{  ncc.title}}
+										</h4>
+										<p class="subhead">
+											{{  ncc.subhead}}
+											
+											
+										</p>
 										<br>
-				            			<a href="#" class="">
-				            				Continuar Leyendo &rsaquo;
-				            			</a>
-				            		</p>
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
+										<a href="/website/news/{{ncc.id}}" title="">
+												
+											
+												Continuar Leyendo &rsaquo;
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/col1-->
+						{% endfor %}
 
-			        <!-- col1 -->
-			        <div class="col-sm-3 cover_news_c">
-			        	<div class="cover_news_c_inner">
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_image">
-				            		<img src="{% static 'img/img1.jpeg' %}" alt="" class="img-fluid w-100">
-								
-				            	</div>
-				            </div>
 
-				            <div class="row">
-				            	<div class="col-sm-12 cover_news_data">
-				            		<a href="#" class="category">Category</a>
-				            		<h4 class="title">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet
-				            		</h4>
-				            		<p class="subhead">
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi deleniti saepe tempore! Aliquam repudiandae distinctio tempora nesciunt maiores tempore, dicta minus, ad soluta molestias neque rem deserunt asperiores aut. Nostrum.
-										<br>
-				            			<a href="#" class="">
-				            				Continuar Leyendo &rsaquo;
-				            			</a>
-				            		</p>
-				            	</div>
-				            </div>
-				        </div>
-			        </div>
-			        <!--/col1-->
-				</div>
-			    <!-- /3 secundary news -->
+					</div>
+					<!-- /3 secundary news -->
+
+
 			</div>
 		</div> <!-- /cover section-->
 		
